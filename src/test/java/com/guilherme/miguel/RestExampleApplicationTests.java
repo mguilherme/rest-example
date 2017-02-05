@@ -28,7 +28,6 @@ public class RestExampleApplicationTests {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context).build();
     }
 
-
     @Test
     public void getUserTest() throws Exception {
         mockMvc.perform(get("/user/{id}", 20))
