@@ -18,6 +18,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import static java.lang.String.format;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Matchers.anyLong;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -47,21 +48,21 @@ public class RestExampleApplicationTests {
     public void getUserTest() throws Exception {
         Long id = 20L;
         given(userService.getUser(id))
-                .willReturn(new User(id, "Miguel", new Contact("Lisbon", "999999999")));
+                .willReturn(new User(id, "John Doe", new Contact("London", "111111111")));
 
         mockMvc.perform(get("/user/{id}", 20))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(jsonPath("$.id").value(20))
-                .andExpect(jsonPath("$.name").value("Miguel"))
-                .andExpect(jsonPath("$.contact.address").value("Lisbon"))
-                .andExpect(jsonPath("$.contact.phone").value("999999999"));
+                .andExpect(jsonPath("$.name").value("John Doe"))
+                .andExpect(jsonPath("$.contact.address").value("London"))
+                .andExpect(jsonPath("$.contact.phone").value("111111111"));
     }
 
     @Test
     public void getNonExistingUserTest() throws Exception {
         Long id = 30L;
-        given(userService.getUser(id))
+        given(userService.getUser(anyLong()))
                 .willThrow(new UserNotFoundException(format("User %s not found", id), id));
 
         mockMvc.perform(get("/user/{id}", 30))
