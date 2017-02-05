@@ -23,7 +23,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
- * We wouldn't need to mock {@link UserService} but if we have any form of persistence this should be the way to do it.
+ * We wouldn't need to mock {@link UserService} but if we have any form of persistence
+ * this should be the way to deal with.
  *
  * @author Miguel Guilherme
  */
