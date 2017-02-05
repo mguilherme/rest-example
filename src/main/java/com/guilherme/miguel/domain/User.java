@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * Created by mguilherme on 05-02-2017.
+ * User Domain
+ *
+ * @author Miguel Guilherme
  */
 @Data
 @AllArgsConstructor

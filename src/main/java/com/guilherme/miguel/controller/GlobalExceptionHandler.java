@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import static java.lang.String.format;
 
 /**
- * Created by mguilherme on 05-02-2017.
+ * Global Exception Handler
+ *
+ * @author Miguel Guilherme
  */
 @Slf4j
 @ControllerAdvice

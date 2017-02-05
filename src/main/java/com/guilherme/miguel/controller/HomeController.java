@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by mguilherme on 05-02-2017.
+ * Home Controller
+ *
+ * @author Miguel Guilherme
  */
 @Slf4j
 @RestController

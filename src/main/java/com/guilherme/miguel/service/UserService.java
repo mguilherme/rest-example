@@ -17,6 +17,8 @@ public class UserService {
         if (id != 20) {
             throw new UserNotFoundException(format("User %s not found", id), id);
         }
+
+        // In a production Application this should be retrieved from a database
         return new User(id, "Miguel", new Contact("Lisbon", "999999999"));
     }
 }

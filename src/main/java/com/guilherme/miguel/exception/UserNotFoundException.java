@@ -1,7 +1,9 @@
 package com.guilherme.miguel.exception;
 
 /**
- * Created by mguilherme on 05-02-2017.
+ * User Not Found Exception
+ *
+ * @author Miguel Guilherme
  */
 public class UserNotFoundException extends RuntimeException {
 
