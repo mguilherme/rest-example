@@ -1,0 +1,6 @@
+language: java
+script: ./gradlew test
+jdk: oraclejdk8
+notifications:
+  email:
+    - mguilherme82@gmail.com
