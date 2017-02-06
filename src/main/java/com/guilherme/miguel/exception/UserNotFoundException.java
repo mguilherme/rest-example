@@ -1,5 +1,7 @@
 package com.guilherme.miguel.exception;
 
+import lombok.Getter;
+
 /**
  * User Not Found Exception
  *
@@ -7,7 +9,8 @@ package com.guilherme.miguel.exception;
  */
 public class UserNotFoundException extends RuntimeException {
 
-    private Long id;
+    @Getter
+    Long id;
 
     public UserNotFoundException() {
         super();
@@ -24,9 +27,5 @@ public class UserNotFoundException extends RuntimeException {
 
     public UserNotFoundException(String message, Throwable throwable) {
         super(message, throwable);
-    }
-
-    public Long getId() {
-        return id;
     }
 }

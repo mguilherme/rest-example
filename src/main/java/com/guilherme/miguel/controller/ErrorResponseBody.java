@@ -1,15 +1,13 @@
 package com.guilherme.miguel.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Value;
 
 /**
  * Error Response
  *
  * @author Miguel Guilherme
  */
-@Data
-@AllArgsConstructor
+@Value
 public class ErrorResponseBody {
 
     String errorCode;
