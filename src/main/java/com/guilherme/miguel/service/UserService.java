@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 import static java.lang.String.format;
 
 /**
- * Created by mguilherme on 05-02-2017.
+ * User Service
+ *
+ * @author Miguel Guilherme
  */
 @Service
 public class UserService {
